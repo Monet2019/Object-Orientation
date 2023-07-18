@@ -222,7 +222,7 @@ var user = {
 
 //Code Here
 
-const updatedUser = {
+let updatedUser = {
   ...user,     
   name: 'Bryan G. Smith',   
   email: 'bryan.smith@devmounta.in'  
@@ -237,6 +237,10 @@ console.log(updatedUser);
 
 //Code Here
 
+delete user.age
+
+console.log(user)
+
 
 //////////////////////////// PROBLEM 12 ////////////////////////////
 /*
@@ -247,7 +251,16 @@ console.log(updatedUser);
 
 //Code here
 
+class Cat{
+  constructor(name, age, color){
+    this.name = name;
+    this.age = age;
+    this.color = color;
+  }
+}
 
+let cat1 = new Cat('Kitty' , '4', 'Brown')
+console.log(cat1.name)
 
 //////////////////////////// PROBLEM 13 ////////////////////////////
 /*
@@ -259,6 +272,21 @@ console.log(updatedUser);
 
 //Code here
 
+class Wizard{
+  constructor(name, age, favoriteSpell) {
+    this.name = name;
+    this.age = age;
+    this.favoriteSpell = favoriteSpell;
+  }
+  castSpell() {
+    console.log(`${this.name} has cast ${this.favoriteSpell}`)
+ }
+}
+
+ let Wizard1 = new Wizard('Dumbledore', '1875', 'Spiritus Revelio')
+
+Wizard1.castSpell();
+  
 //////////////////////////// PROBLEM 14 ////////////////////////////
 /*
     Write a class called Phone. We'll use it as if we were creating
