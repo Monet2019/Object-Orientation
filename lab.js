@@ -7,8 +7,8 @@
 //Code here
 
 me = {
-  "name" : "Shekerah" ,
-  "age" : 25
+  name: "Shekerah" ,
+  age: 25
 }
 
 console.log(me)
@@ -22,13 +22,21 @@ console.log(me)
 
 //Code here
 
+dog = {
+  name: "Nyla" ,
+  color: "Blonde" ,
+  age: 4 ,
+  goodGirl: true 
+}
 
+console.log(dog)
 
 //////////////////////////// PROBLEM 3 ////////////////////////////
 /* Print out the name of the dog you created in problem 2 using dot-notation. */
 
 //Code here
 
+console.log(dog.name)
 
 
 //////////////////////////// PROBLEM 4 ////////////////////////////
@@ -36,6 +44,7 @@ console.log(me)
 
 //Code here
 
+console.log(dog['color'])
 
 
 //////////////////////////// PROBLEM 5 ////////////////////////////
@@ -46,13 +55,36 @@ console.log(me)
 
 //Code here
 
+favoriteThings = {
+  band: 'Beyonce', 
+food: 'Pizza',
+person: 'Beyonce',
+book: 'Queen Charoltte',
+movie: 'Thor',
+holiday: 'Christmas'
+
+}
+
+console.log(favoriteThings.person)
+
 
 /*
   After you've made your object, use bracket or dot notation to add another key named 'car' with the value being your favorite car and then another key named 'show' with the value being your favorite show.
 */
 
 //Code here
+//favoriteThings = {
+  //band: 'Beyonce', 
+//food: 'Pizza',
+//person: 'Beyonce',
+//book: 'Queen Charoltte',
+//movie: 'Thor',
+//holiday: 'Christmas',
+//}
 
+favoriteThings.car = 'BMW'
+favoriteThings.show = 'The Lincoln Lawyer'
+console.log(favoriteThings)
 
 /*
   Now use bracket or dot notation to change the value of the food key in your favoriteThings object to be 'Chicken Nuggets'
@@ -61,6 +93,9 @@ console.log(me)
 
 //Code here
 
+favoriteThings.food = 'Chicken Nuggets'
+favoriteThings.book = 'Harry Potter'
+console.log(favoriteThings)
 
 //////////////////////////// PROBLEM 6 ////////////////////////////
 
@@ -79,7 +114,9 @@ var carDetails = {
 
 //Code Here
 
+let {color, make, model, year} = carDetails
 
+console.log(carDetails)
 
 //////////////////////////// PROBLEM 7 ////////////////////////////
 
@@ -92,13 +129,20 @@ var carDetails = {
 function greeting( obj ) {
   //Code Here
   
+
+  let {firstName, lastName, title} = obj
+
   // Do not edit the code below.
   return 'Hello, ' + title + ' ' + firstName + ' ' + lastName + '!';
   // Do not edit the code above.
 }
+ person = {
+  firstName: 'SHekerah',
+  lastName: 'Henderson',
+  title: 'Ms.'
+ }
 
-
-
+console.log(greeting(person))
 //////////////////////////// PROBLEM 8 ////////////////////////////
 
 /*
@@ -110,8 +154,20 @@ function greeting( obj ) {
 */
 
 //Code Here
+function totalPopulation(obj){
+  let { utah, california, texas, arizona } = obj
+  let total = utah + california + texas + arizona
+  return total
+}
+statePopulations = {
+  utah: 2200000,
+  california: 10000000,
+  texas: 59000000,
+  arizona: 5000000
+};
 
-
+let total = totalPopulation(statePopulations);
+console.log(total); 
 
 //////////////////////////// PROBLEM 9 ////////////////////////////
 
@@ -125,7 +181,26 @@ function greeting( obj ) {
 
 //Code Here
 
+function ingredients(obj){
+  
+  let carb, fat, protein = obj
+  let ingredientsArray = []
+  
+  ingredientsArray.push(carb, fat, protein)
+  
+  return ingredientsArray
+}
 
+let data = {
+
+  carb: '10g',
+  fat: '25g',
+  protein: '5g'
+}
+
+let result = ingredients(data)
+
+console.log(data)
 
 //////////////////////////// PROBLEM 10 ////////////////////////////
 // Do not edit the code below.
@@ -147,6 +222,13 @@ var user = {
 
 //Code Here
 
+const updatedUser = {
+  ...user,     
+  name: 'Bryan G. Smith',   
+  email: 'bryan.smith@devmounta.in'  
+};
+
+console.log(updatedUser);
 
 //////////////////////////// PROBLEM 11 ////////////////////////////
 /*
